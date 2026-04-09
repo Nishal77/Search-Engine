@@ -1,16 +1,16 @@
 :root {
   --font-display: "Avenir Next Condensed", "Arial Narrow", "Franklin Gothic Medium", sans-serif;
   --font-body: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
-  --bg: #f3efe8;
-  --surface: rgba(255, 252, 247, 0.88);
-  --surface-strong: #fffdf9;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-strong: #ffffff;
   --ink: #171411;
   --muted: #726458;
   --line: rgba(23, 20, 17, 0.11);
   --accent: #a85d2b;
   --accent-soft: rgba(168, 93, 43, 0.1);
   --teal: #2e6e69;
-  --shadow: 0 18px 50px rgba(44, 28, 17, 0.06);
+  --shadow: 0 12px 30px rgba(44, 28, 17, 0.04);
 }
 
 * {
@@ -19,18 +19,14 @@
 
 html {
   min-height: 100%;
-  background:
-    radial-gradient(circle at top left, rgba(168, 93, 43, 0.12), transparent 26%),
-    radial-gradient(circle at bottom right, rgba(46, 110, 105, 0.1), transparent 24%),
-    var(--bg);
+  background: var(--bg);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0));
+  background: var(--bg);
   font-family: var(--font-body);
 }
 
@@ -136,62 +132,17 @@ select {
 
 .hero-stage {
   position: relative;
-  overflow: clip;
   padding: 26px 0 10px;
 }
 
 .hero-shell {
-  position: relative;
   min-height: 72svh;
   display: flex;
   align-items: center;
   padding: 48px 0 36px;
 }
 
-.hero-visual {
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(23, 20, 17, 0.08);
-  background:
-    linear-gradient(135deg, rgba(255, 252, 247, 0.82), rgba(244, 239, 232, 0.55)),
-    radial-gradient(circle at 80% 28%, rgba(168, 93, 43, 0.16), transparent 22%),
-    radial-gradient(circle at 76% 72%, rgba(46, 110, 105, 0.14), transparent 24%);
-  box-shadow: var(--shadow);
-}
-
-.hero-orbit {
-  position: absolute;
-  border: 1px solid rgba(23, 20, 17, 0.09);
-  border-radius: 999px;
-}
-
-.hero-orbit-a {
-  width: min(48vw, 560px);
-  height: min(48vw, 560px);
-  right: -8%;
-  top: 8%;
-}
-
-.hero-orbit-b {
-  width: min(34vw, 380px);
-  height: min(34vw, 380px);
-  right: 10%;
-  bottom: 9%;
-}
-
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(23, 20, 17, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(23, 20, 17, 0.045) 1px, transparent 1px);
-  background-size: 84px 84px;
-  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 35%, transparent 88%);
-}
-
 .hero-poster {
-  position: relative;
-  z-index: 1;
   width: min(100%, 720px);
   padding: 0 0 0 4px;
 }
@@ -265,7 +216,7 @@ select {
 .detail-pane,
 .metrics-pane {
   border: 1px solid rgba(23, 20, 17, 0.08);
-  background: linear-gradient(180deg, rgba(255, 253, 249, 0.9), rgba(255, 250, 244, 0.68));
+  background: #ffffff;
   box-shadow: var(--shadow);
 }
 
@@ -569,10 +520,6 @@ select {
   .hero-shell {
     min-height: auto;
     padding: 34px 0 28px;
-  }
-
-  .hero-grid {
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 40%, transparent 100%);
   }
 
   .premium-aside {

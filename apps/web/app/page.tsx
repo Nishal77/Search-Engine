@@ -61,11 +61,6 @@ export default async function HomePage({
     <main className="home-page">
       <section className="hero-stage">
         <div className="shell hero-shell">
-          <div className="hero-visual" aria-hidden="true">
-            <div className="hero-orbit hero-orbit-a" />
-            <div className="hero-orbit hero-orbit-b" />
-            <div className="hero-grid" />
-          </div>
           <section className="hero-poster">
             <div className="eyebrow">Mini Elasticsearch-Style Project</div>
             <h1>
